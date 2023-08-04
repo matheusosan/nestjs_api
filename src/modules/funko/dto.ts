@@ -1,8 +1,8 @@
 import { Type } from 'class-transformer';
 import {
+  IsNumberString,
   IsString,
   IsNotEmpty,
-  IsNumber,
   ValidateNested,
   IsArray,
   IsUrl,
@@ -24,7 +24,7 @@ export class CreateFunkoDTO {
   description: string;
 
   @IsNotEmpty({ message: 'O preço não pode ser nulo.' })
-  @IsNumber()
+  @IsNumberString()
   price: number;
 
   @IsArray()

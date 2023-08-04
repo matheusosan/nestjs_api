@@ -14,7 +14,7 @@ model Funko {
   id          Int       @default(autoincrement())    @id 
   title       String
   description String
-  price       Int
+  price       Decimal   @db.Decimal(10,2)
   images      Image[]
 }
 
